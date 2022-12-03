@@ -16,3 +16,16 @@ web          NodePort    10.105.231.216   <none>        8080:30039/TCP    1m
 
 ---------------------make predication------------------------------
 
+INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 219-234-884
+INFO:flask.app:JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+INFO:flask.app:Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+INFO:flask.app:Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+INFO:werkzeug:172.17.0.1 - - [03/Dec/2022 08:18:20] "POST /predict HTTP/1.1" 200 -

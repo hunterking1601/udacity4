@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      name: web
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+      containers:
+      - name: web
+        image: 374000545310.dkr.ecr.us-east-1.amazonaws.com/project4:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 200m
+      imagePullSecrets:
+      - name: project4
+
+

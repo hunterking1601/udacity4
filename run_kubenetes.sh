@@ -8,7 +8,7 @@ dockerpath=374000545310.dkr.ecr.us-east-1.amazonaws.com/project4
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl apply -f test_deployment_app.yaml
+kubectl apply -f deployment_app.yaml
 
 # Step 3:
 # List kubernetes pods

@@ -1,44 +1,18 @@
 [minikube@localhost ~]$ ./run_kubenetes.sh
 deployment.apps/web created
 NAME                   READY   STATUS    RESTARTS   AGE
-web-7bb78497f5-pl7l8   0/1     Pending   0          0s
-service/web unchanged
-[minikube@localhost ~]$ kubectl get pods
-NAME                   READY   STATUS              RESTARTS   AGEZZ
-web-7bb78497f5-pl7l8   0/1     ContainerCreating   0          10s
-[minikube@localhost ~]$ kubectl get svc
-NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          14d
-web          NodePort    10.105.231.214   <none>        8080:30039/TCP   12d
+web-sdf45sdf7fg-dfsd7   0/1     Pending   0          0s
+service/web created
 [minikube@localhost ~]$ kubectl get pods
 NAME                   READY   STATUS    RESTARTS   AGE
-web-7bb78497f5-pl7l8   1/1     Running   0          13m
+web-sdf45sdf7fg-dfsd7   1/1     Running   0          1m
+[minikube@localhost ~]$ kubectl get svc
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes   ClusterIP   10.97.0.1        <none>        443/TCP           40m
+web          NodePort    10.105.231.216   <none>        8080:30039/TCP    1m
+
 
 
 
 ---------------------make predication------------------------------
 
-
-INFO:werkzeug: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 932-210-118
-INFO:flask.app:JSON payload: 
-{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-INFO:flask.app:Inference payload DataFrame: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-INFO:flask.app:Scaling Payload: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-INFO:werkzeug:172.17.0.1 - - [13/Jul/2022 17:25:56] "POST /predict HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [13/Jul/2022 17:28:24] "HEAD / HTTP/1.1" 200 -
-INFO:flask.app:JSON payload: 
-{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-INFO:flask.app:Inference payload DataFrame: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-INFO:flask.app:Scaling Payload: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-INFO:werkzeug:172.17.0.1 - - [13/Jul/2022 17:29:12] "POST /predict HTTP/1.1" 200 -

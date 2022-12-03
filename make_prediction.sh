@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-#PORT=8000
+PORT=8000
 #Node_port
-PORT=30039
+#PORT=30039
 echo "Port: $PORT"
 
 # POST method predict
@@ -27,4 +27,4 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST http://192.168.49.2:$PORT/predict
+     -X POST http://localhost:$PORT/predict

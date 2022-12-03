@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: cuong_project4
 spec:
   selector:
     matchLabels:
-      name: web
+      name: cuong_project4
   template:
     metadata:
       labels:
-        name: web
+        name: cuong_project4
     spec:
       containers:
-      - name: web
+      - name: cuong_project4
         image: 374000545310.dkr.ecr.us-east-1.amazonaws.com/project4:latest
         ports:
         - containerPort: 8080
@@ -20,6 +20,6 @@ spec:
           requests:
             cpu: 200m
       imagePullSecrets:
-      - name: project4
+      - name: secret_project4
 
 

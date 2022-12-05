@@ -2,29 +2,30 @@
 
 PORT=8000
 #Node_port
-#PORT=30039
+PORTFORWARDING=30039
 echo "Port: $PORT"
 
 # POST method predict
-curl -d '{  
-   "CHAS":{  
+curl -d '{
+   "CHAS":{
       "0":0
    },
-   "RM":{  
+   "RM":{
       "0":6.575
    },
-   "TAX":{  
+   "TAX":{
       "0":296.0
    },
-   "PTRATIO":{  
+   "PTRATIO":{
       "0":15.3
    },
-   "B":{  
+   "B":{
       "0":396.9
    },
-   "LSTAT":{  
+   "LSTAT":{
       "0":4.98
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST http://localhost:$PORT/predict
+   #   -X POST http://localhost:$PORT/predict
+   -X POST http://192.168.49.2:$PORTFORWARDING/predict
